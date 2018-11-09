@@ -1,5 +1,5 @@
 const appConfig = {};
-appConfig.port = 3000;
+appConfig.port = 3001;
 appConfig.allowedCorsOrigin = '*';
 appConfig.environment = 'div';
 appConfig.db = {}
