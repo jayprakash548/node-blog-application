@@ -3,7 +3,7 @@ const express = require('express') // This is needed to import express in our ap
 const appConfig = require('./config/appConfig') // Include appConfig File
 const app = express() // Just decalre instance
 const fs = require('fs')
-//Bootstrap Routes
+//Bootstrap Routes, It's basically used to multiple JS files
 const routesPath = './routes'
 fs.readdirSync(routesPath).forEach(function(File){
     if(~File.indexOf('.js')){        

@@ -1,11 +1,10 @@
 const express= require('express')
+const blogController = require('../controller/blogController')
 
-const setRouter = (app) => {
-    const hello = (req, res) => res.send('Hello Jay Prakash!')
-    const yes = (req, res) => res.send('Yes Mr. Jay Prakash!')
-    app.get('/hello', hello);
-    app.get('/yes', yes);
-}
+const setRouter = (app) => {    
+    app.get('/hello', blogController.hello);
+    app.get('/yes', blogController.yes);
+}// End SetRouter Function
 module.exports = {
     setRouter:setRouter
 }
