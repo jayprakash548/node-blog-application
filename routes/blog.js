@@ -1,9 +1,10 @@
 const express= require('express')
 const blogController = require('../controller/blogController')
 
-const setRouter = (app) => {    
-    app.get('/hello', blogController.hello);
-    app.get('/yes', blogController.yes);
+let setRouter = (app) => {        
+    app.get('/test/route/:firstname/:lastname',blogController.testRoute)
+    app.get('/test/query',blogController.testQuery)
+    app.post('/test/body',blogController.testBody)
 }// End SetRouter Function
 module.exports = {
     setRouter:setRouter

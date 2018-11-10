@@ -1,22 +1,22 @@
-const mongooose = require('mongoose') //Import Mongoose
-const schema = mongooose.Schema;
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
-const blogSchema = new blogSchema(
+const blogSchema = new Schema(
     {
-        titblogId: {
-            type: string,
+        blogId: {
+            type: String,
             unique: true
-        },
+        },   
         title: {
-            type: string,
+            type: String,
             default: '' 
         },
         description: {
-            type: string,
+            type: String,
             default: ''
         },
         bodyHtml: {
-            type: string,
+            type: String,
             default: ''
         },
         views: {
@@ -46,4 +46,4 @@ const blogSchema = new blogSchema(
         }
     }
 )
-mongooose.model('blog', blogSchema);
+mongoose.model('Blog', blogSchema);
