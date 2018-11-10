@@ -2,7 +2,9 @@ const appConfig = {};
 appConfig.port = 3001;
 appConfig.allowedCorsOrigin = '*';
 appConfig.environment = 'div';
-appConfig.db = {}
+appConfig.db = {
+    uri: 'mongodb://127.0.0.1:27017/blogAppDB'
+}
 appConfig.apiVersion = '/api/v1';
 
 module.exports = {
