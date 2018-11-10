@@ -1,10 +1,18 @@
 const http = require('http')
 const express = require('express') // This is needed to import express in our application
 const appConfig = require('./config/appConfig') // Include appConfig File
-const app = express() // Just decalre instance
+
 const fs = require('fs')
 const mongoose = require('mongoose')
+const cookieParser = require('cookie-parser')
+const bodyParser = require('body-parser')
 
+const app = express() // Just decalre instance
+
+//Middleware
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended : false }))
+app.use(cookieParser())
 //Bootstrap Models, It's basically used to multiple JS files
 let modelsPath = './models'
 fs.readdirSync(modelsPath).forEach(function(file){

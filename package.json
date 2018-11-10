@@ -9,6 +9,9 @@
   "author": "jay",
   "license": "MIT",
   "dependencies": {
+    "@types/body-parser": "^1.17.0",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
     "express": "^4.16.4",
     "mongoose": "^5.3.11"
   }
